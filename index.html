@@ -27,30 +27,30 @@
         </nav>
     </header>
     <main>
-        <section class="container section-form">
+        <section class="container section">
             <div class="">
-                <h1>Nuevo formulario</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                <h1 class="section__title">Nuevo formulario</h1>
+                <p class="section__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     bed industry's standard dummy text ever since.</p>
             </div>
-            <h5>Datos del vendedor:</h5>
+            <h5 class="section__subtitle">Datos del vendedor:</h5>
             <form class="form-autos" id="formulario">
                 <div class="form-datos-vendedor">
                     <div class="form-group">
                         <label for="name">Nombre y apellido</label>
-                        <input type="text" name="name" id="name" class="">
+                        <input type="text" name="name" id="name" class="" maxlength="40" required>
                     </div>
                     <div class="form-group">
                         <label for="name">Rut Vendedor</label>
-                        <input type="text" name="rut" id="rut" class="">
+                        <input type="text" name="rut" id="rut" class="" placeholder="12345678-9" maxlength="10" oninput="checkRut(this)" required>
                     </div> 
                 </div>
                 <hr> 
-                <h5>Datos del vehículo:</h5>
+                <h5 class="section__subtitle">Datos del vehículo:</h5>
                 <div class="form-datos-vehiculo">
                     <div class="form-group">
                         <label for="name">Patente vehiculo</label>
-                        <input type="text" name="patente" id="patente" class="">
+                        <input type="text" name="patente" id="patente" class="" maxlength="6" required>
                     </div>  
                     <div class="form-group">
                         <label for="marca">Marca vehículo</label>
@@ -77,6 +77,7 @@
                             <option value="Azul">Azul</option>
                             <option value="Verde">Verde</option>
                             <option value="Blanco">Blanco</option>
+                            <option value="Blanco">Negro</option>
                         </select>
                     </div>                       
                 </div>       
@@ -87,8 +88,8 @@
 
         <section class="container section-listado">
             <div class="">
-                <h1>Lista formulario</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                <h1 class="section__title">Lista formulario</h1>
+                <p class="section__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     bed industry's standard dummy text ever since.</p>
             </div>            
             <table class="table-cars">

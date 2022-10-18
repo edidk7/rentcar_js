@@ -39,7 +39,7 @@ header .active {
   border-bottom: 1px solid #fff;
 }
 
-h1 {
+h1.section__title {
   color: #191919;
   font-weight: 500;
   font-size: 24px;
@@ -48,7 +48,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-h5 {
+h5.section__subtitle {
   color: #5f5f5f;
   font-weight: 500;
   font-size: 18px;
@@ -56,7 +56,7 @@ h5 {
   margin-bottom: 24px;
 }
 
-p {
+p.section__description {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -123,6 +123,18 @@ select {
   border: 1px solid #999999;
   border-radius: 8px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 0.375rem 0.75rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url(../img/ico-arrow.png);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+}
+
+input:focus-visible,
+select:focus-visible {
+  outline: 1px solid #5f5f5f;
 }
 
 .nav-item {
@@ -157,6 +169,10 @@ button.btn-entel:hover {
   background: #ffffff;
   color: #000000;
   border: 1px solid #000000;
+}
+
+.form-group {
+  margin-bottom: 16px;
 }
 
 .section-listado {
@@ -203,7 +219,7 @@ th .ico-delete {
 }
 
 @media only screen and (min-width: 600px) {
-  h1 {
+  h1.section__title {
     font-size: 30px;
     line-height: 36px;
     margin-top: 80px;
