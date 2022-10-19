@@ -228,8 +228,7 @@ th .btnDelete {
     line-height: 36px;
     margin-top: 80px;
   }
-  .form-datos-vendedor,
-.form-datos-vehiculo {
+  .form-datos-vendedor, .form-datos-vehiculo {
     grid-gap: 1rem;
   }
   .form-datos-vendedor {
@@ -286,13 +285,11 @@ th .btnDelete {
   display: none;
 }
 
-#one:checked ~ .panels #one-panel,
-#two:checked ~ .panels #two-panel {
+#one:checked ~ .panels #one-panel, #two:checked ~ .panels #two-panel {
   display: block;
 }
 
-#one:checked ~ .tabs #one-tab,
-#two:checked ~ .tabs #two-tab {
+#one:checked ~ .tabs #one-tab, #two:checked ~ .tabs #two-tab {
   color: #000;
   border-bottom: 1px solid #000;
 }/*# sourceMappingURL=main.css.map */
