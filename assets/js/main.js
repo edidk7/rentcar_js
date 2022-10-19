@@ -13,14 +13,6 @@ let arrayAutos = [],
 
 // Funciones
 
-//Active Link Page Location
-if (getUrl === "index.html") {
-    indexPageLinkUI.classList.add("active");
-} else if (getUrl === "listado.html") {
-    indexPageLinkUI.classList.remove("active");
-    listadoPageLinkUI.classList.add("active");
-}
-
 const checkRut = (rut) => {
     var valor = rut.value.replace('.','');
     valor = valor.replace('-','');
@@ -76,6 +68,7 @@ const GuardarDB = () => {
 
     localStorage.setItem('listado', JSON.stringify(arrayAutos));
 
+
     PintarDB();
 
 
@@ -103,7 +96,7 @@ const PintarDB = () => {
                 <td>${element.marca}</td>
                 <td>${element.modelo}</td>
                 <td>${element.color}</td>
-                <td><button class="btnDelete">eliminar</button></td>
+                <td><a class="btnDelete">eliminar</a></td>
             </tr>      
                 `
 
@@ -123,6 +116,7 @@ const EliminarDB = (id) => {
     });
 
     arrayAutos.splice(indexArray, 1);
+    alert("Se elimino correctamente")
     GuardarDB();
 }
 
@@ -140,7 +134,7 @@ formularioUI.addEventListener('submit', (e) => {
         colorUI = document.querySelector('#color').value;
 
     CrearItem(nombreUI, rutUI, patenteUI, marcaUI, modeloUI, colorUI);
-
+    alert("Se agrego un nuevo auto")
     GuardarDB();
 
     formularioUI.reset();
@@ -152,7 +146,9 @@ document.addEventListener('DOMContentLoaded', PintarDB);
 listadoAutosUI.addEventListener("click", (e) => {
 
     e.preventDefault();
-    // console.log(e);
+    // console.log(e.target.innerHTML );
+    // let btn =  e.target.innerHTML.split("/").slice(1).join("/");
+    // console.log(btn);
 
     if (e.target.innerHTML === 'eliminar') {
         let texto = (e.path[2].childNodes[1].innerHTML);
@@ -162,5 +158,4 @@ listadoAutosUI.addEventListener("click", (e) => {
         }
     }
 })
-
 

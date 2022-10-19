@@ -17,7 +17,7 @@ hr {
 }
 
 header {
-  background-color: #5f5f5f;
+  background-color: #002EFF;
   color: #ffffff;
   height: 60px;
 }
@@ -49,7 +49,7 @@ h1.section__title {
 }
 
 h5.section__subtitle {
-  color: #5f5f5f;
+  color: #002EFF;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -134,7 +134,7 @@ select {
 
 input:focus-visible,
 select:focus-visible {
-  outline: 1px solid #5f5f5f;
+  outline: 1px solid #002EFF;
 }
 
 .nav-item {
@@ -155,7 +155,7 @@ button.btn-entel {
   height: 45px;
   left: 28px;
   top: 1021.47px;
-  background: #000000;
+  background: #FF3D00;
   color: #ffffff;
   border-radius: 22.5px;
   border: 0;
@@ -167,8 +167,8 @@ button.btn-entel {
 }
 button.btn-entel:hover {
   background: #ffffff;
-  color: #000000;
-  border: 1px solid #000000;
+  color: #FF3D00;
+  border: 1px solid #FF3D00;
 }
 
 .form-group {
@@ -202,15 +202,16 @@ th td {
   line-height: 17px;
   height: 74px;
 }
-table .ico-delete,
-td .ico-delete,
-th .ico-delete {
+table .btnDelete,
+td .btnDelete,
+th .btnDelete {
   background-image: url(../img/ico-delete.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   display: list-item;
   cursor: pointer;
+  color: transparent;
 }
 
 .table-cars {
@@ -219,6 +220,9 @@ th .ico-delete {
 }
 
 @media only screen and (min-width: 600px) {
+  header {
+    height: 100px;
+  }
   h1.section__title {
     font-size: 30px;
     line-height: 36px;
@@ -237,4 +241,58 @@ th .ico-delete {
   button.btn-entel {
     float: right;
   }
+  .logo_entel {
+    width: 65px;
+    height: 50px;
+  }
+}
+.tab {
+  cursor: pointer;
+  margin: 0px 0px;
+  background: transparent;
+  display: inline-block;
+  color: #fff;
+}
+
+.panel {
+  display: none;
+  -webkit-animation: fadein 0.8s;
+          animation: fadein 0.8s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.panel-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.radio {
+  display: none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel {
+  display: block;
+}
+
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab {
+  color: #000;
+  border-bottom: 1px solid #000;
 }/*# sourceMappingURL=main.css.map */
